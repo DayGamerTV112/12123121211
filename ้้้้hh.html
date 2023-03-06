@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Welcome</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+            font-size: 40px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #message {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #message span {
+            display: inline-block;
+            transform: skew(-20deg);
+            background-color: red;
+            padding: 5px 10px;
+        }
+
+        #button {
+            position: absolute;
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            cursor: pointer;
+            border: 1px solid white;
+            padding: 10px 20px;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        #button:hover {
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="message">
+        <p><span>ยินดีต้อนรับ</p>
+    </div>
+    <div id="button">เลื่อนลงไปดู</div>
+    <script>
+        const button = document.querySelector('#button');
+        button.addEventListener('click', () => {
+            window.location.href = 'hi.html';
+        });
+    </script>
+</body>
+
+</html>
